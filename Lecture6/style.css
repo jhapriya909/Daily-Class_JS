@@ -1,0 +1,32 @@
+nav{
+    display: flex;
+    background: black;
+    height: 10vh;
+    justify-content: center;
+    gap: 50px;
+    
+}
+ul{
+    color:aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+
+}
+.register{
+    color: aliceblue;
+    border:90%;
+    background-color: brown;
+    width: 20vh;
+    height:5vh;
+    border-radius: 10px;
+}
+
+h1{
+    font-size: 100px;
+    margin-left: 15vh;
+    margin-top: -25%;
+}
+
+img{
+    margin-left: 140vh;
+}

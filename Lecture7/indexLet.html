@@ -1,0 +1,27 @@
+<!-- let is a global scope element -->
+<!-- var is a block scope element -->
+<!-- Const is a block scope element -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Redeclaring a variable using let</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        let x = 10;
+
+        {
+            let x = 2;
+        }
+
+        document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>

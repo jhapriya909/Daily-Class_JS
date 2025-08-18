@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Return Name Using this</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: beige;
+    }
+    input, button {
+      padding: 8px;
+      margin-top: 10px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Your Name</h2>
+  <input type="text" id="nameInput" placeholder="Type your name here..." />
+  <button onclick="showName()">Submit</button>
+
+  <div id="result"></div>
+
+  <script>
+    // Constructor function
+    function User(name) {
+      this.name = name;
+    //   this.lastname = lt;
+      this.getName = function() {
+        return this.name;
+      };
+    }
+
+    // Function to handle button click
+    function showName() {
+      const input = document.getElementById("nameInput").value;
+
+      // Create object using constructor
+      const user = new User(input);
+
+      // Use `this` to get name and show in result div
+      document.getElementById("result").innerText = user.getName();
+    }
+  </script>
+
+</body>
+</html>

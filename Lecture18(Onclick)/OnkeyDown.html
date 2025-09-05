@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>On keydown example</h1>
+
+    <input type="text" onkeydown="keyPressed(event)" placeholder="Type Something...">
+
+    <script>
+        function keyPressed(m){
+            alert("You pressed: " + m.key);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>On Mouse Hover Function</h1>
+
+    <h2 id="heading" onmouseover="changeText()"  onmouseout="changeAgain()">Hover over this text!</h2>
+
+    <script>
+      // function hoverEffect(){
+      //     alert("You have been hover on heading number 2");
+      // }
+      function changeText() {
+        document.getElementById("heading").innerText = "DONE";
+      }
+
+      function changeAgain(){
+        document.getElementById("heading").innerText="Hover over this text!";
+      }
+
+
+    </script>
+  </body>
+</html>

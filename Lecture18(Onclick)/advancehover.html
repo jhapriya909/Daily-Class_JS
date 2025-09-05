@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="shape"></div>
+
+    <style>
+        .shape{
+            width: 180px;
+            height: 100px;
+            background: red;
+            border-radius: 12px;
+            transition: border-radius .35s, width .35s, height -35s, background .35s;
+        }
+
+        .shape:hover{
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background:green;
+        }
+    </style>
+</body>
+</html>

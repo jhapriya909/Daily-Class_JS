@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Backtick Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .output {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Backtick (Template Literal) Demo</h1>
+    <div class="output" id="output"></div>
+
+    <script>
+      // Multi-line string
+      const message = `Welcome to the Backtick Demo!
+This string spans multiple lines
+without using escape characters.`;
+
+      // string Interpolation 
+      const name = "Aarav";
+      const items = 3;
+      const price = 99;
+      const total = items * price;
+
+      const summary = `${name} bought ${items} items for ₹${total}.`;
+// "$" can we use dollar into the backtick
+      // Expression evaluation
+      const discount = 0.1;
+      const finalPrice = `${name}'s final price after 10% discount is ₹${(
+        total *
+        (1 - discount)
+      ).toFixed(2)}.`;
+
+      // Tagged template
+      function emphasize(strings, ...values) {
+        return strings
+          .map((str, i) => str.toUpperCase() + (values[i] || ""))
+          .join("");
+      }
+
+      const loud = emphasize`hello ${name}, your total is ₹${total}!`;
+// cout<<"Your parccel value is : "<<number <<"come again!"<<endl;
+      // Display all results
+      document.getElementById("output").innerHTML = `
+      <p>${message}</p>
+      <p>${summary}</p>
+      <p>${finalPrice}</p>
+      <p><strong>${loud}</strong></p>
+    `;
+    </script>
+  </body>
+</html>
